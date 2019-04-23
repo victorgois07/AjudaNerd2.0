@@ -19,7 +19,12 @@
 
 const { Ignitor } = require('@adonisjs/ignitor')
 
+const rook = require('rookout');
+rook.start({
+    token: '259f92deb1bc18019d6375a769fb391ca1a188aa73d992a0bc4cdf939bcbf9df'
+})
+
 new Ignitor(require('@adonisjs/fold'))
-  .appRoot(__dirname)
-  .fireHttpServer()
-  .catch(console.error)
+    .appRoot(__dirname)
+    .fireHttpServer()
+    .catch(console.error)
